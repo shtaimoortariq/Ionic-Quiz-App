@@ -1,0 +1,32 @@
+<ion-view>
+  <ion-content>
+
+
+
+    <div ng-controller="quizController as ac">
+      <div class="card">
+        <div class="item item-text-wrap">
+          <p>USER NAME</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="item item-text-wrap">
+          <p>{{ac.quizMain[ac.i].Qusetion}}</p>
+        </div>
+      </div>
+
+      <ion-list>
+        <div ng-repeat="currentOption in ac.quizMain[ac.i].Options">
+          <ion-radio ng-model="filter.blue">{{currentOption}}</ion-radio>
+        </div>
+      </ion-list>
+
+      <button class="button button-block button-calm" ng-click="ac.nextQuestion()">
+        Next
+      </button>
+
+
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+<ion-view>
+  <ion-content>
+    <div ng-controller="userLoginController as userLogin">
+
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password">
+        </label>
+      </div>
+
+      <button class="button button-block button-calm" ng-click="userLogin.changeRoute()">
+        Log In
+      </button>
+
+      <button class="button button-block button-calm" ng-click="userLogin.signUpWithGoogle()">
+        Sign Up With Google Chrome
+      </button>
+    </div>
+  </ion-content>
+</ion-view>
+
