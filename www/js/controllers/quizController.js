@@ -4,14 +4,15 @@
 
 angular.module("myApp.quizController", [])
 
-  .controller("quizController", ['$state',quizController]);
+  .controller("quizController", ['$state', 'user',quizController]);
 
-function quizController($state) {
+function quizController($state, user) {
 
   this.i = 0;
   this.length = 2;
+  this.user = user.getlogInUser();
   //this.currentQuestion = this.questions[0];
-
+  
   this.quizMain = [
     {
       Qusetion: "Our country name is ______________?",
